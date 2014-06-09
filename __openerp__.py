@@ -18,7 +18,7 @@
     'version': '0.1',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
-    'depends': ['sale'],
+    'depends': ['sale_basic_extensions'],
     'description': "Adds a header field for sale orders",
     'data': [
         'view/sale_order.xml',
