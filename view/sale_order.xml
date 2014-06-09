@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="sale_form_view" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_position_based_quotations.sale_form_view"/>
+			<field name="arch" type="xml">
+
+				<field name="partner_shipping_id" position="after">
+					<field name="header_text" attrs="{ 'readonly' : [('state', 'in', ('cancel','archived','lost'))] }"/>
+	        	</field>
+
+            </field>
+        </record>
+        
+        <record id="sale_view_quotation_tree" model="ir.ui.view">
+        	<field name="name">sale.quotation.tree.inherit</field>
+			<field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="header_text"/>
+				</field>
+			</field>
+        </record>
+        
+        <record id="sale_view_order_tree" model="ir.ui.view">
+        	<field name="name">sale.order.tree.inherit</field>
+			<field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="header_text"/>
+				</field>
+			</field>
+        </record>
+
+    </data>
+</openerp>
+
