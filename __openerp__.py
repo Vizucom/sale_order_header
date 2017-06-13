@@ -21,6 +21,6 @@
     'depends': ['sale'],
     'description': "Adds a header field for sale orders",
     'data': [
-        'view/sale_order.xml',
+        'views/sale_order.xml',
     ],
 }
