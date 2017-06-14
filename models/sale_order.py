@@ -7,4 +7,4 @@ class SaleOrder(models.Model):
 
     _inherit = 'sale.order'
 
-    header_text = fields.Char('Header for quotation / sale order')
+    header_text = fields.Char('Header for Quotation')
